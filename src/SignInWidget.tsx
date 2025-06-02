@@ -15,7 +15,6 @@ const SignInWidget = () => {
     <AuthKitProvider config={config}>
       <div
         style={{
-          padding: "1rem",
           fontFamily: "sans-serif",
           display: "flex",
           justifyContent: "center",
