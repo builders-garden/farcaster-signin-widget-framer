@@ -21,6 +21,7 @@ const SignInWidget = () => {
           alignItems: "center",
           minHeight: "100vh",
           margin: 0,
+          backgroundColor: "transparent",
         }}
       >
         <SignInButton
