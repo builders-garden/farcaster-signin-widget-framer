@@ -13,7 +13,17 @@ const SignInWidget = () => {
   const nonce = "your_nonce_here"; // You may want to make this dynamic
   return (
     <AuthKitProvider config={config}>
-      <div style={{ padding: "1rem", fontFamily: "sans-serif" }}>
+      <div
+        style={{
+          padding: "1rem",
+          fontFamily: "sans-serif",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh",
+          margin: 0,
+        }}
+      >
         <SignInButton
           nonce={nonce}
           onError={(error) => {
