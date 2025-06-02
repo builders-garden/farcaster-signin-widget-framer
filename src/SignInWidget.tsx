@@ -22,6 +22,8 @@ const SignInWidget = () => {
           minHeight: "100vh",
           margin: 0,
           backgroundColor: "transparent",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <SignInButton
