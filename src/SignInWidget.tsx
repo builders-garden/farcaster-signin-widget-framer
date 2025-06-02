@@ -10,7 +10,11 @@ const config = {
 };
 
 const SignInWidget = () => {
-  const nonce = "your_nonce_here"; // You may want to make this dynamic
+
+  const expandIframe = () => {
+    window.parent.postMessage({ type: "farcaster-auth-expand" }, "*");
+  };
+  const nonce = Date.now().toString() + Math.random().toString();
   return (
     <AuthKitProvider config={config}>
       <div
@@ -24,6 +28,9 @@ const SignInWidget = () => {
           backgroundColor: "transparent",
           position: "relative",
           zIndex: 1,
+        }}
+        onClick={() => {
+          expandIframe();
         }}
       >
         <SignInButton
